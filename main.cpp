@@ -1,4 +1,4 @@
-///Simono Šaltenio 2gr. 2pogr. v0.1
+///Simono Šaltenio 2gr. 2pogr. v0.2
 #include <iostream>
 #include <string>
 
@@ -12,7 +12,12 @@ int main()
     std::cout << "Iveskite varda: " << std::endl;
     std::cin >> vardas;
 
-    pasisveikinimas = "Sveikas, " + vardas + "!";
+    if (vardas.back() == 's') {  // .back() nuo C++11
+    	pasisveikinimas = "Sveikas, " + vardas + "!";
+  	}
+    else {
+    	pasisveikinimas = "Sveika, " + vardas + "!";
+  	}
 
     for(int i=0; i<pasisveikinimas.length(); i++){
         pirma+="*";
