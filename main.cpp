@@ -1,15 +1,13 @@
-///Simono Šaltenio 2gr. 2pogr. v0.2
+///Simono Šaltenio 2gr. 2pogr. v1.0
 #include <iostream>
 #include <string>
 
 int main()
 {
     std::string vardas, pasisveikinimas="";
-    std::string pirma="";
-    std::string antra="";
-    std::string trecia;
+    std::string remelis="";
 
-    std::cout << "Iveskite varda: " << std::endl;
+    std::cout << "Iveskite varda:" << std::endl;
     std::cin >> vardas;
 
     if (vardas.back() == 's') {  // .back() nuo C++11
@@ -20,15 +18,23 @@ int main()
   	}
 
     for(int i=0; i<pasisveikinimas.length(); i++){
-        pirma+="*";
-        antra+=" ";
+        remelis+="*";
     }
 
-    std::cout << "**" << pirma << "**" << std::endl;
-    std::cout << "* " << antra << " *" << std::endl;
-    std::cout << "* " << pasisveikinimas << " *" << std::endl;
-    std::cout << "* " << antra << " *" << std::endl;
-    std::cout << "**" << pirma << "**" << std::endl;
+    int eil;
+    std::cout << "Iveskite eiluciu skaiciu:" << std::endl;
+    std::cin >> eil;
+
+    std::cout << "**" << remelis << "**" << std::endl;
+    for(int i=0; i<eil*2+1; i++){
+        std::cout << "* ";
+        if(i==eil){
+            std::cout << pasisveikinimas;
+        }
+        else for(int i=0; i<pasisveikinimas.length(); i++) std::cout << " ";
+        std::cout << " *" << std::endl;
+    }
+    std::cout << "**" << remelis << "**" << std::endl;
 
     return 0;
 }
