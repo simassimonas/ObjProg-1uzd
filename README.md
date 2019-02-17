@@ -11,8 +11,6 @@
 Ivedus vartotojo varda **Simas** ir eiluciu skaiciu, pvz. 3, programa isveda:
 
 ```shell
-Koks Jūsų vardas: Remigijus
-Įveskite rėmelio dydį (nuo 1 iki 10): 3
 
 *******************
 *                 *
