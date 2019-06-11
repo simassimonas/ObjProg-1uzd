@@ -48,3 +48,26 @@ Sudarytu failu istrynimas:
 **Pridėta**
 - Galima nurodyti eiluciu skaiciu
 - Nebereikia kiekvienos eilutes saugoti atskirame kintamajame
+
+```shell
+ std::ifstream ffin ("rez.txt");
+    string lline;
+    vector<string> e1;
+    vector<string> e2;
+    for(auto i=0; i<kiekEil/2; i++){
+        (getline(ffin, lline));
+        e1.push_back(lline);
+    }
+
+    for(auto i=kiekEil/2; i<kiekEil; i++){
+        (getline(ffin, lline));
+        e2.push_back(lline);
+    }
+
+    std::ofstream ffout ("rezGalutinis.txt");
+    for(auto i=0; i<e1.size(); i++){
+        ffout << std::left << e1[i];
+        ffout << std::right << e2[i] << endl;
+    }
+
+```
